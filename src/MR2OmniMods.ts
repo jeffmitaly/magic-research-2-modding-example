@@ -10,11 +10,11 @@ const PACKAGE = require("../package.json");
 // Check the TypeScript declaration to see what are all the different things you
 // have.
 export function load(MR2: MR2Globals) {
-  MR2.alert("Loading Omni Mods...", "Beginning to load all mods...");
+  MR2.alert("DEBUG: Beginning to load all Omni mods...");
 
-  MR2.alert("Loading Omni Test Mod...", "Beginning to load Omni Test Mod...");
+  MR2.alert("DEBUG: Loading Omni Test Mod...");
   loadOmniTestMod(MR2);
-  MR2.alert("Loaded Omni Test Mod...", "Loaded Omni Test Mod...");
+  MR2.alert("DEBUG: Loaded Omni Test Mod...");
 
   //next mod would go here....
 
@@ -24,10 +24,9 @@ export function load(MR2: MR2Globals) {
 // the main game's content.
 // The main purpose for this is to add new Elements or Resources.
 export function preload(MR2: MR2Globals) {
-  MR2.alert("Preloading mod...", "Beginning to preload...");
-  
+
   //any mods needing preloading would go here....
-  MR2.alert("Not preloading any omni mods...", "No Omni Mods to preload...");
+  MR2.alert("DEBUG: Not preloading any Omni mods...");
 
 }
 

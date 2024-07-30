@@ -6,7 +6,7 @@ export function loadOmniTestMod(MR2: MR2Globals) {
     "modTest1",
     "Testing Mods",
     MR2.TransformationType.Multiplier,
-    (state) => 300.0,
+    (state) => 3000.0,
   );
 
   MR2.registerTransformation(
@@ -14,6 +14,6 @@ export function loadOmniTestMod(MR2: MR2Globals) {
     "modTest2",
     "Testing Mods",
     MR2.TransformationType.Multiplier,
-    (state) => 400.0,
+    (state) => 4000.0,
   );
 }
