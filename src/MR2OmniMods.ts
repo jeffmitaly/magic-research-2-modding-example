@@ -16,7 +16,9 @@ export function load(MR2: MR2Globals) {
   loadOmniTestMod(MR2);
   MR2.alert("DEBUG: Loaded Omni Test Mod...");
 
-  //next mod would go here....
+  MR2.alert("DEBUG: Loading Omni Potions and Effects Mod...");
+  loadOmniTestMod(MR2);
+  MR2.alert("DEBUG: Loaded Omni Potions and Effects Mod...");
 
 }
 
