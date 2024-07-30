@@ -14,6 +14,7 @@ const {
   name,
   version,
   description,
-} = require("./MR2TestMods");
+} = require("./MR2OmniMods.ts");
 
 export { description, id, load, name, preload, version };
+

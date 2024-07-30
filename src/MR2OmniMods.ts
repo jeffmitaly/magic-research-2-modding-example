@@ -1,16 +1,5 @@
 import { MR2Globals } from "magic-research-2-modding-sdk";
-import { loadBasicTestMod } from "./examples/BasicTestMod";
-import { loadBuffingPouchItemTestMod } from "./examples/BuffingPouchItemTestMod";
-import {
-  loadElementCreationTestMod,
-  preloadElementCreationTestMod,
-} from "./examples/ElementCreationTestMod";
-import { loadEnemyTestMod } from "./examples/EnemyTestMod";
-import { loadEquippableWeaponTestMod } from "./examples/EquippableWeaponTestMod";
-import { loadSpellTestMod } from "./examples/SpellTestMod";
-import { loadStorylineAndBuildingTestMod } from "./examples/StorylineAndBuildingTestMod";
-import { loadUITestMod } from "./examples/UITestMod";
-import { loadWorldsMaxDifficultyTestMod } from "./examples/WorldsMaxDifficultyTestMod";
+import { loadOmniTestMod } from "./OmniTestMod";
 
 const PACKAGE = require("../package.json");
 
@@ -21,26 +10,25 @@ const PACKAGE = require("../package.json");
 // Check the TypeScript declaration to see what are all the different things you
 // have.
 export function load(MR2: MR2Globals) {
-  MR2.alert("Loading mod", "Beginning to load");
+  MR2.alert("Loading Omni Mods...", "Beginning to load all mods...");
 
-  loadBasicTestMod(MR2);
-  loadBuffingPouchItemTestMod(MR2);
-  loadEquippableWeaponTestMod(MR2);
-  loadSpellTestMod(MR2);
-  loadStorylineAndBuildingTestMod(MR2);
-  loadEnemyTestMod(MR2);
-  loadElementCreationTestMod(MR2);
-  // loadElementOverrideTestMod(MR2);
-  loadUITestMod(MR2);
-  loadWorldsMaxDifficultyTestMod(MR2);
+  MR2.alert("Loading Omni Test Mod...", "Beginning to load Omni Test Mod...");
+  loadOmniTestMod(MR2);
+  MR2.alert("Loaded Omni Test Mod...", "Loaded Omni Test Mod...");
+
+  //next mod would go here....
+
 }
 
 // In this function you will want to load things that could potentially affect
 // the main game's content.
 // The main purpose for this is to add new Elements or Resources.
 export function preload(MR2: MR2Globals) {
-  MR2.alert("Preloading mod", "Beginning to preload");
-  preloadElementCreationTestMod(MR2);
+  MR2.alert("Preloading mod...", "Beginning to preload...");
+  
+  //any mods needing preloading would go here....
+  MR2.alert("Not preloading any omni mods...", "No Omni Mods to preload...");
+
 }
 
 // The following fields are used by the game.
@@ -56,4 +44,4 @@ export const name = PACKAGE.description;
 export const version = PACKAGE.version;
 // A description that could be shown in-game.
 export const description =
-  "A set of MR2 test mods to try out the modding feature.";
+  "A set of MR2 Omni mods to make MR2 even better.";
