@@ -1,4 +1,5 @@
 import { MR2Globals } from "magic-research-2-modding-sdk";
+import { loadOmniPotionsAndEffects } from "./OmniPotionsMod";
 import { loadOmniTestMod } from "./OmniTestMod";
 
 const PACKAGE = require("../package.json");
@@ -17,7 +18,7 @@ export function load(MR2: MR2Globals) {
   MR2.alert("DEBUG: Loaded Omni Test Mod...");
 
   MR2.alert("DEBUG: Loading Omni Potions and Effects Mod...");
-  loadOmniTestMod(MR2);
+  loadOmniPotionsAndEffects(MR2);
   MR2.alert("DEBUG: Loaded Omni Potions and Effects Mod...");
 
 }
